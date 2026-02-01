@@ -1,66 +1,49 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-lilac-cream text-lilac-green">
+      {/* NAVIGATION */}
+      <nav className="flex justify-between items-center px-8 py-6 md:px-16">
+        <div className="text-3xl font-serif tracking-tight cursor-pointer">
+          Lilac Template
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+        <div className="flex gap-8 font-medium">
+          <a href="#" className="hover:opacity-70 transition-opacity">Blog</a>
+          <a href="#" className="hover:opacity-70 transition-opacity">Contact</a>
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section className="flex flex-col md:flex-row items-center justify-between px-8 py-12 md:px-16 md:py-24 gap-12">
+        
+        {/* Left Side: Arched Image */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <div className="relative w-[300px] h-[450px] md:w-[450px] md:h-[600px] overflow-hidden rounded-t-full">
+            <Image 
+              src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2080&auto=format&fit=crop" 
+              alt="Lilac Flowers"
+              fill
+              priority // This tells Next.js to load this image immediately (good for LCP)
+              className="object-cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Right Side: Text Content */}
+        <div className="w-full md:w-1/2 space-y-8">
+          <h1 className="text-6xl md:text-8xl font-serif leading-[1.1]">
+            Live your life <br /> 
+            <span className="italic">in full bloom</span>
+          </h1>
+          <p className="text-xl md:text-2xl font-light">
+            Therapy for Adults in Minneapolis, MN.
+          </p>
+          <button className="mt-4 px-10 py-4 border border-lilac-green text-lilac-green hover:bg-lilac-green hover:text-white transition-all duration-300 uppercase tracking-widest text-sm flex items-center gap-2">
+            Connect With Me <span>→</span>
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }
