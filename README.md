@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dr. Maya Reynolds | Private Practice Website Redesign
 
-## Getting Started
+>A high-performance, responsive therapy practice website built with Next.js and Tailwind CSS. This project is a bespoke digital home for Dr. Maya Reynolds, PsyD, a psychologist based in Santa Monica, California, inspired by the "Lilac" Squarespace template.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS (Responsive & Mobile-first)
+- **Images:** Next/Image (Optimized with sizes and priority props)
+- **Deployment:** Vercel (Ready for deployment)
+
+---
+
+## 🎨 Design & Redesign Process
+
+### 1. UI Cloning
+- Replicated the grid system, spacing, and typography hierarchy of the original Lilac template.
+- Ensured 100% responsiveness across mobile, tablet, and desktop views.
+
+### 2. Dr. Maya Reynolds' Profile Integration
+- **SEO Optimization:** Headings (H1, H2) crafted to target local keywords like "Trauma & Anxiety Psychologist in Santa Monica".
+- **Brand Identity:** Replaced the default lilac theme with a "Sage and Stone" palette (`#7C8E7B` and `#2D391E`) to reflect the grounded, professional nature of Dr. Maya’s practice.
+- **Specialties:** Featured three key services—Anxiety/Panic, Trauma (EMDR), and Burnout—derived from the therapist's profile.
+
+### 3. Custom "Our Office" Section
+- Created a new section highlighting the physical practice space.
+- Used the office description: "A quiet, private space designed for safety and grounding".
+- Integrated actual office imagery provided in the source documentation.
+
+---
+
+## 🛠️ Performance & Accessibility
+
+- **Next/Image Optimization:** Fixed "missing sizes prop" warnings for responsive images.
+- **Sticky Header:** Custom React hook to hide navigation on scroll-down and reveal on scroll-up.
+- **Accessibility:** Semantic HTML tags (`<header>`, `<main>`, `<address>`) and ARIA labels for screen-reader support.
+
+---
+
+## 📂 Project Structure
+
+```
+├── public/              # Optimized office and profile images
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx   # Global metadata and fonts
+│   │   └── page.tsx     # Full homepage implementation
+├── next.config.ts       # Remote image pattern configurations
+└── tailwind.config.ts   # Custom brand color theme
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Setup & Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/The-morning-star23/lilac-clone.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **View the site:**
+   Open [http://localhost:3000]
